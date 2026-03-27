@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 75 14% 95%;
+    --foreground: 100 8% 16%;
+    --card: 75 14% 95%;
+    --card-foreground: 100 8% 16%;
+    --popover: 75 14% 95%;
+    --popover-foreground: 100 8% 16%;
+    --primary: 105 10% 52%;
+    --primary-foreground: 75 14% 95%;
+    --secondary: 70 8% 90%;
+    --secondary-foreground: 100 8% 16%;
+    --muted: 70 8% 90%;
+    --muted-foreground: 90 5% 45%;
+    --accent: 105 10% 52%;
+    --accent-foreground: 75 14% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 90 8% 82%;
+    --input: 90 8% 82%;
+    --ring: 105 10% 52%;
+    --radius: 1.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    background-color: #F6F7F3;
+    color: #2B2F28;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+}
+
+@layer components {
+  .font-mono-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  
+  .text-accent {
+    color: #7E8F7C;
+  }
+  
+  .bg-primary-wash {
+    background-color: #F6F7F3;
+  }
+  
+  .bg-secondary-wash {
+    background-color: #E8E9E2;
+  }
+  
+  .text-primary-dark {
+    color: #2B2F28;
+  }
+  
+  .text-secondary-gray {
+    color: #6F756B;
+  }
+  
+  .grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+  
+  .btn-primary {
+    @apply px-8 py-4 rounded-full font-medium transition-all duration-300;
+    background-color: #7E8F7C;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(126, 143, 124, 0.3);
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+    color: #2B2F28;
+    border: 1.5px solid rgba(43, 47, 40, 0.2);
+  }
+  
+  .btn-secondary:hover {
+    border-color: #7E8F7C;
+    color: #7E8F7C;
+  }
+  
+  .image-shadow {
+    box-shadow: 0 18px 50px rgba(43, 47, 40, 0.10);
+  }
+  
+  .card-shadow {
+    box-shadow: 0 10px 30px rgba(43, 47, 40, 0.08);
+  }
+  
+  .section-pinned {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .headline-xl {
+    font-size: clamp(44px, 5vw, 76px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  
+  .headline-lg {
+    font-size: clamp(34px, 3.6vw, 56px);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+  }
+  
+  .body-text {
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.6;
+    color: #6F756B;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+body::-webkit-scrollbar {
+  width: 0px;
+}
