@@ -1,8 +1,33 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "regen"
-type = "javascript"
-compatibility_date = "2024-12-16"
+name = "cascade-wellness"
+
+[env.production]
+routes = [
+  { pattern = "example.com", zone_name = "example.com" }
+]
 
 [build]
 command = "npm run build"
 cwd = "./"
+
+[build.upload]
+format = "modules"
+
+[[build.upload.rules]]
+type = "CompiledContentType"
+fallthrough = true
+
+[env.production.build.upload]
+
+[[env.production.build.upload.rules]]
+type = "CompiledContentType"
+globs = ["**/*.js"]
+fallthrough = true
+
+[[env.production.build.upload.rules]]
+type = "Text"
+globs = ["**/*.html", "**/*.css"]
+fallthrough = true
+
+[assets]
+directory = "dist"
