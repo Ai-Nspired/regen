@@ -1,0 +1,8 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "regen"
+type = "javascript"
+compatibility_date = "2024-12-16"
+
+[build]
+command = "npm run build"
+cwd = "./"
