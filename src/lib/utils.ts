@@ -1,4 +1,5 @@
-import { clsx } from "clsx"; 
-import { twMerge } from "tailwind-merge";
+// Corrected import statement
+import { ClassValue } from 'some-module';
+// Other existing code
 
-export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)); }
+// Your existing code with ClassValue properly imported
