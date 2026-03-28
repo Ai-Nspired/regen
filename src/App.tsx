@@ -589,7 +589,7 @@ function App() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#2B2F28] mb-1">Phone</h4>
-                  <p className="text-[#6F756B]">(509) 555-0147</p>
+                  <p className="text-[#6F756B]">(509) 548-4780</p>
                 </div>
               </div>
               
@@ -599,7 +599,7 @@ function App() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#2B2F28] mb-1">Email</h4>
-                  <p className="text-[#6F756B]">hello@cascadewellness.com</p>
+                  <p className="text-[#6F756B]">office@cascadewellness.com</p>
                 </div>
               </div>
               
