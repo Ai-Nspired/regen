@@ -322,7 +322,7 @@ function App() {
       {/* Section 1: Hero */}
       <section ref={heroRef} className="section-pinned bg-[#F6F7F3] z-10">
         <div className="absolute left-[9vw] top-[10vh]">
-          <span className="font-mono-label text-[#6F756B]">CASCADE WELLNESS</span>
+          <span className="font-mono-label text-[#6F756B]">regenerative longevity</span>
         </div>
         
         {/* Hero Image */}
